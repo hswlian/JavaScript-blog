@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    #back{
+      background-color: rgb(230,220,208);
+      width: 100%;
+      height:100%;
+      text-align: center;
+      padding-top: 10%;
+    }
+    .house{
+      width:300px;
+      height: 200px;
+    }
+    </style>
+  </head>
+
+  <body id='back'>
+    <img class="house" src="img/house1.png"/>
+    <script>
+    (function(win,doc){
+      // 动态加载图片
+      let MoveHouse = function(options){
+        this.options = options;
+        this.init();
+      }
+
+      MoveHouse.prototype = {
+        init : function(){
+          // 初始化参数
+          this.options.bdbox = this.options.bdbox || '';
+          this.options.imageArr = this.options.imageArr || [];
+          this.options.speed = this.options.speed || 20;
+          this.options.autoplay = this.options.autoplay || true;
+          this.options.domType = this.options.domType || 'class';
+
+          if(this.options.domType == 'class'){
+            this.bdbox = document.getElementsByClassName(this.options.bdbox)[0];
+          }else{
+            this.bdbox = document.getElementById(this.options.bdbox);
+          }
+          this.imageList = this.options.imageArr.concat();
+
+          let that=this;
+          if(this.options.autoplay.toString() != 'true'){
+            this.bdbox[this.options.autoplay] = function(){
+              that._loadImage();
+            }
+          }else{
+            that._loadImage();
+          }
+        },
+        play : function(){
+          let i,self = this;
+          let j=0;
+          if(!self.options.speed){
+            if(win.navigator.appCodeName == 'Mozilla'){
+              var move = function(){
+                self.bdbox.src = self.options.imageArr[j];
+                j < 11 ? j++ : j = 0;
+                window.requestAnimationFrame(move);
+              }
+              move();
+            }
+          }else{
+            let housemove = setInterval(function(){
+              i <= self.options.imageArr.length ? self._changeSrcs(self.bdbox,self.options.imageArr,i++) : i = 1;
+              // }
+            },self.options.speed);
+          }
+        },
+        // 预加载图片
+        _initImage:function(imageArr){
+          let srcArr = [];
+          for(let i = 1,len = imageArr.length;i <= len-1;i ++){
+            let img =  new Image();
+            img.src = imageArr[i];
+            srcArr.push(img);
+          }
+          return srcArr;
+        },
+        _loadImage : function(){
+          let self = this;
+          if(self.imageList.length != 0){
+            let img =  new Image();
+            img.onload = function(){
+              self._loadImage(this.imageList);
+            }
+            img.src = this.imageList.shift();
+          }else{
+            if(self.options.autoplay){
+              self.play();
+            }
+          }
+
+        },
+        // 修改src资源
+        _changeSrcs:function(house,srcArr,i){
+          house.src = srcArr[--i];
+        }
+      }
+
+      window.MoveHouse = MoveHouse;
+    })(window,document);
+
+    (function(){
+
+      let imgArr = [];
+      for(let i = 1;i <= 12;i++){
+        imgArr[i-1] = 'img/house'+i+'.png';
+      }
+
+      // 第一个参数为class名称，第二个参数为img地址的数组
+      let move = new MoveHouse({
+        domType : 'class',
+        bdbox : 'house',
+        //autoplay : false,
+        speed : 100,
+        imageArr : imgArr
+      });
+    })();
+    </script>
+  </body>
+</html>
