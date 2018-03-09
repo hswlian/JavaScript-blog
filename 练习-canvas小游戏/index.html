@@ -1,0 +1,347 @@
+﻿<html>
+<body>
+<style>
+    p{
+        font-size: 50px;
+    }
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    #myCanvas{
+        background: url("img/BG.jpg");
+    }
+    #container{
+        background-color: antiquewhite;
+        width: 250px;
+        height: 8%;
+        border-radius: 0.5em;
+        top: 40px;
+        left: 0px;
+        margin-left: 12px;
+        position: fixed;
+    }
+    .image{
+        display: inline-block;
+        float: left;
+        margin-left: 20px;
+        margin-top: 10px;
+        z-index: 999;
+    }
+    #score{
+        display: inline-block;
+        float: right;
+        margin-right: 50px;
+        margin-top: 0px;
+    }
+    .head{
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .tip{
+        background-color: rgba(208,161,100,0.8);
+        width:300px;
+        height: 200px;
+        border-radius: 0.5em;
+        opacity: 0.8;
+        position: fixed;
+        right: 50px;
+        top:10px;
+        margin-top: 40px;
+        padding: 20px 10px;
+    }
+    ul p{
+        font-size: 14px;
+        color: crimson;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    ul li{
+        list-style: none;
+    }
+ </style>
+<canvas id="myCanvas"></canvas>
+<img class="head" src="img/leafHead.png" height="20%" width="100%">
+<div id="container">
+    <img class="image" src="img/num.png" height="40px" width="40px"/>
+    <div id="score"></div>
+</div>
+<div class="tip">
+    <ul>
+        <h1>游戏规则：</h1>
+        <li>
+            <p>1.通过左右键移动篮子</p></li>
+        <li>
+            <p>2.如果篮子收集到黄色树叶，加三分,漏一个叶子减一分</p>
+        </li>
+        <li>
+            <p>3.如果篮子收集到红色树叶，游戏结束</p>
+        </li>
+        <li>
+            <p>(浏览器推荐宽度：408*783)</p>
+        </li>
+    </ul>
+</div>
+</body>
+<script>
+
+ let _score = 0;
+    let game = function(){
+        //    初始化画布
+        let myCanvas = document.getElementById('myCanvas'),
+            h =myCanvas.height = document.body.clientHeight,
+            w =myCanvas.width = document.body.clientWidth,
+            ctx = myCanvas.getContext('2d'),
+            leaf =  new Image();
+        leaf.src = "img/yz.png";
+        let leafR =  new Image();
+        leafR.src = "img/leaf.png";
+        let land =  new Image();
+        land.src = "img/land.png";
+
+        // 球球
+        let circle = function(options){
+            let circle = function(){
+                this.options = options;
+                this.init();
+            }
+            circle.prototype ={
+                init:function(){
+                    this.x = this.options.cX;
+                    this.y = this.options.cY;
+                    this.cR = this.options.cR;
+                    if(this.options.cT == 0){
+                        this.drawRLeaf();
+                    }else{
+                        this.drawLeaf();
+                    }
+
+
+                },
+                drawLeaf : function(){
+                    ctx.drawImage(leaf,this.x , this.y,70,70);
+                },
+                drawRLeaf : function(){
+                    ctx.drawImage(leafR,this.x , this.y,70,70);
+                }
+            }
+            return new circle();
+        }
+
+        //好多球球，滚
+        let circleDrop = function(cX,cY,cT,cR){
+            circle({
+                cX :cX,cY:cY,cT:cT,cR:cR
+                });
+        }
+
+
+        //初始化篮子
+        let landObj = function(){
+            let _landOptions = {},
+                dirStart =0,
+                dirEnd = 0,
+                cY = [0,500,100,300,30,600,800,400,1200,1000];
+                cX = [900,200,800,450,340,546,233,700,500,800];
+
+            let _setting = function(){
+                let dirIpone = 0;
+                myCanvas.addEventListener('touchstart',function(e){
+                    dirStart = e.changedTouches[0].clientX;
+                })
+                myCanvas.addEventListener('touchmove',function(e){
+                    dirEnd = e.changedTouches[0].clientX;
+                })
+                dirIpone = dirStart -dirEnd;
+                if(dirIpone !== 0){
+                    if(dirIpone >0) {
+                        _landOptions.direction = -1;
+                        _landOptions.x = _landOptions.x -2;
+                    } else{
+                        _landOptions.direction = 1;
+                        _landOptions.x = _landOptions.x +2;
+                    }
+                    dirIpone =0;
+                }
+
+                document.onkeydown = function(e){
+                    _landOptions.direction = e.keycode;
+                    //direction = 0,篮子向左移动，direction = 1，篮子向右移动
+                    switch (e.keyCode){
+                        case 39:
+                            _landOptions.direction = 1;
+                            _landOptions.x = _landOptions.x +20;
+                            break;
+                        case 37:
+                            _landOptions.direction = -1;
+                            _landOptions.x = _landOptions.x -20;
+                            break;
+                        default:
+                            _landOptions.direction = 0;
+                    }
+                }
+            }
+
+
+            let _class = function(options) {
+                _landOptions = options;
+                (function () {
+                    window.requestAnimationFrame(function(){
+                        _setting();
+                        ctx.clearRect(0,0,w,h);
+
+                        //雪降落
+                        //红色球
+                        if(cY[0] > h-80){
+                            cY[0] = 0;
+                            if(_landOptions.x-60 < cX[0] && cX[0] < _landOptions.x+60){
+                                console.log(_landOptions.x);
+                                console.log(cX[0])
+                                alert("game over1");
+                                return;
+                            }
+                            cX[0] = Math.random() *w;
+                        }
+                        if(cY[1] > h-80){
+                            cY[1] = 0;
+                            if(_landOptions.x-60 < cX[1] && cX[1] < _landOptions.x+60){
+                                console.log(_landOptions.x);
+                                console.log(cX[1])
+                                alert("game over2");
+                                return;
+                            }
+                            cX[1] = Math.random() *w;
+                        }
+                        if(cY[2] > h-80){
+                            cY[2] = 0;
+                            if(_landOptions.x-60 < cX[2] && cX[2] < _landOptions.x+60){
+                                console.log(_landOptions.x);
+                                console.log(cX[2])
+                                alert("game over3");
+                                return;
+                            }
+                            cX[2] = Math.random() *w;
+                        }
+                        if(cY[3] > h-80){
+                            cY[3] = 0;
+                            if(_landOptions.x-60 < cX[3] && cX[3] < _landOptions.x+60){
+                                _score=_score + 3;
+                            }else{
+                                _score=_score - 1;
+                            }
+                            cX[3] = Math.random() * w;
+                        }
+                        if(cY[4] > h-80){
+                            cY[4] = 0;
+                            if(_landOptions.x-60 < cX[4] && cX[4] < _landOptions.x+60){
+                                _score=_score + 3;
+                            }else{
+                                _score=_score - 1;
+                            }
+                            cX[4] = Math.random() *100 *4;
+                        }
+                        if(cY[5] > h-80){
+                            cY[5] = 0;
+                            if(_landOptions.x-60 < cX[5] && cX[5] < _landOptions.x+60){
+                                _score=_score + 3;
+                            }else{
+                                _score=_score - 1;
+                            }
+                            cX[5] = Math.random() *100 *4;
+                        }
+                        if(cY[6] > h-80){
+                            cY[6] = 0;
+                            if(_landOptions.x-60 < cX[6] && cX[6] < _landOptions.x+60){
+                                _score=_score +3;
+                            }else{
+                                _score=_score - 1;
+                            }
+                            cX[6] = Math.random() *100 *4;
+                        }
+                        if(cY[7] > h-80){
+                            cY[7] = 0;
+                            if(_landOptions.x-60 < cX[7] && cX[7] < _landOptions.x+60){
+                                _score=_score + 3;
+                            }else{
+                                _score=_score - 1;
+                            }
+                            cX[7] = Math.random() *100 *4;
+                        }
+                        if(cY[8] > h-80){
+                            cY[8] = 0;
+                            if(_landOptions.x-40 < cX[8] && cX[8] < _landOptions.x+40){
+                                _score=_score + 3;
+                            }else{
+                                _score=_score - 1;
+                            }
+                            cX[8] = Math.random() *100 *4;
+                        }
+                        if(cY[9] > h-80){
+                            cY[9] = 0;
+                            if(_landOptions.x-60 < cX[9] && cX[9] < _landOptions.x+60){
+                                _score=_score + 3;
+                            }else{
+                                _score=_score - 1;
+                            }
+                            cX[9] = Math.random() *100 *4;
+                        }
+
+                        circleDrop(cX[0],cY[0]++,0);
+                        circleDrop(cX[1],cY[1]++,0);
+                        circleDrop(cX[2],cY[2]++,0);
+                        circleDrop(cX[3],cY[3]++);
+                        circleDrop(cX[4],cY[4]++);
+                        circleDrop(cX[5],cY[5]++);
+                        circleDrop(cX[6],cY[6]++);
+                        circleDrop(cX[7],cY[7]++);
+                        circleDrop(cX[3],cY[8]++);
+                        circleDrop(cX[9],cY[9]++);
+
+
+
+                        //篮子变小
+                        // if(!(_score%10) && _score !=0){
+                        //     _landOptions.w = 30;
+                        //     _landOptions.h = 20;
+                        // }
+
+                        _landOptions.x<0 ? _landOptions.x = w:_landOptions;
+                        _landOptions.x>w ? _landOptions.x = 0 :_landOptions;
+                        ctx.drawImage(land, _landOptions.x, _landOptions.y, _landOptions.w, _landOptions.h);
+                        _landOptions.direction = 0;
+                        _class(_landOptions);
+                        document.getElementById('score').innerHTML = '<p>' + _score +'</p>';
+                    })
+
+                })();
+            }
+
+            return{
+                create : function(options){
+                    return new _class(options);
+                },
+                _move : function(options){
+                    return new _move(options);
+                }
+            }
+        }();
+
+        leaf.onload = function(){
+            let aa = landObj.create({
+                x:50,
+                y:h-56,
+                w:100,
+                h:50
+            })
+        }
+
+    }
+    game();
+
+    window.addEventListener('resize',function(){
+        game();
+    })
+
+</script>
+</html>
