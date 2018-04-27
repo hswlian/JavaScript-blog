@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+body{
+    background-color: rgba(155,155,155,.2);
+}
+        .g-wrap3 .g-content {
+            margin: 0 auto;
+            margin-top: 100px;
+            width: 1180px;
+            overflow: hidden;
+        }
+        .g-wrap3 .g-content ul {
+            width: 2080px;
+            overflow: hidden;
+        }
+        .g-wrap3 .g-content ul .title {
+            cursor: pointer;
+        }
+        .g-wrap3 ul {
+            position: relative;
+            float: right;
+            width: 1200px;
+            overflow: hidden;
+        }
+        .g-wrap3 ul li {
+            position: relative;
+            float: right;
+            height: 525px;
+            background-color: #ece9ea;
+        }
+        .g-wrap3 ul li .is-active {
+            cursor: pointer;
+            display: inline-block;
+        }
+        .g-wrap3 ul li:nth-child(5):hover .title {
+            width: 0;
+        }
+        .g-wrap3 ul li:nth-child(5):hover .content {
+            width: 676px;
+        }
+        .g-wrap3 ul li:nth-child(5) .content {
+            display: inline-block;
+            width: 676px;
+            height: 525px;
+            background: url('img/carousel_01.png') no-repeat;
+        }
+        .g-wrap3 ul li:nth-child(5) .title {
+            display: inline-block;
+            z-index: 10;
+            width: 122px;
+            height: 525px;
+            background: url('img/one.png') no-repeat;
+            width: 0;
+            transition: width 1s;
+        }
+        .g-wrap3 ul li:nth-child(4):hover .title {
+            width: 0;
+        }
+        .g-wrap3 ul li:nth-child(4):hover .content {
+            width: 676px;
+        }
+        .g-wrap3 ul li:nth-child(4) .content {
+            display: inline-block;
+            width: 676px;
+            height: 525px;
+            background: url('img/carousel_02.png') no-repeat;
+            width: 0px;
+            transition: width 1s;
+        }
+        .g-wrap3 ul li:nth-child(4) .title {
+            display: inline-block;
+            width: 122px;
+            height: 525px;
+            background: url('img/two.png') no-repeat;
+            transition: width 1s;
+        }
+        .g-wrap3 ul li:nth-child(3):hover .title {
+            width: 0;
+        }
+        .g-wrap3 ul li:nth-child(3):hover .content {
+            width: 676px;
+        }
+        .g-wrap3 ul li:nth-child(3) .content {
+            display: inline-block;
+            width: 676px;
+            height: 525px;
+            background: url('img/carouesl_03.png') no-repeat;
+            width: 0px;
+            transition: width 1s;
+        }
+        .g-wrap3 ul li:nth-child(3) .title {
+            display: inline-block;
+            width: 122px;
+            height: 525px;
+            background: url('img/three.png') no-repeat;
+            transition: width 1s;
+        }
+        .g-wrap3 ul li:nth-child(2):hover .title {
+            width: 0;
+        }
+        .g-wrap3 ul li:nth-child(2):hover .content {
+            width: 676px;
+        }
+        .g-wrap3 ul li:nth-child(2) .content {
+            display: inline-block;
+            width: 676px;
+            height: 525px;
+            background: url('img/carousel_04.png') no-repeat;
+            width: 0px;
+            transition: width 1s;
+        }
+        .g-wrap3 ul li:nth-child(2) .title {
+            display: inline-block;
+            width: 122px;
+            height: 525px;
+            background: url('img/four.png') no-repeat;
+            transition: width 1s;
+        }
+        .g-wrap3 ul li:nth-child(1):hover .title {
+            width: 0;
+        }
+        .g-wrap3 ul li:nth-child(1):hover .content {
+            width: 676px;
+        }
+        .g-wrap3 ul li:nth-child(1) .content {
+            display: inline-block;
+            width: 676px;
+            height: 525px;
+            background: url('img/carousel_05.png') no-repeat;
+            width: 0px;
+            transition: width 1s;
+        }
+        .g-wrap3 ul li:nth-child(1) .title {
+            display: inline-block;
+            width: 122px;
+            height: 525px;
+            background: url('img/five.png') no-repeat;
+            transition: width 1s;
+        }
+        ul:not(:nth-child(5)):hover li .first {
+            width: 122px;
+        }
+    </style>
+</head>
+<body>
+<div class="g-wrap3">
+    <div class="g-content">
+        <ul>
+            <li class="item">
+                <div class="is-active">
+                    <div class="content"></div>
+                </div>
+                <div class=" title"></div>
+            </li>
+            <li class="item">
+                <div class="is-active">
+                    <div class="content"></div>
+                </div>
+                <div class="title"></div>
+            </li>
+            <li class="item">
+                <div class="is-active">
+                    <div class="content"></div>
+                </div>
+                <div class="title"></div>
+            </li>
+            <li class="item">
+                <div class="is-active">
+                    <div class="content"></div>
+                </div>
+                <div class="title"></div>
+            </li>
+            <li class="item">
+                <div class="is-active">
+                    <div class="content"></div>
+                </div>
+                <div class="first title"></div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+</script>
+</body>
+</html>
