@@ -1,3 +1,6 @@
+.g-wrap-01{
+
+}
 .g-main{
     margin: 0 auto;
     margin-top: 100px;
@@ -75,4 +78,40 @@
     100%{
         color: darkgray;
     }
+}
+
+
+.g-wrap-02 ul{
+    overflow: auto;
+}
+.g-wrap-02 li{
+    padding-top: 25px;
+    float: left;
+    margin-right: 150px;
+    list-style: none;
+}
+.g-wrap-02 li .box{
+    height:100px;
+    width: 100px;
+    text-align: center;
+    line-height: 110px;
+    border: 1px solid rgba(155,155,155,.9);
+}
+.box1{
+    transform: translateX(10px);
+}
+.box2{
+    transform: skew(30deg);
+}
+.box3{
+    transform: scaleX(.5);
+}
+.box4{
+    transform: rotate(45deg);
+}
+.box5{
+    transform: translate(10px,20px);
+}
+.box6{
+    transform: skewY(20deg)
 }
