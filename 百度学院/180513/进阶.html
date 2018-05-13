@@ -21,12 +21,11 @@
     }
     .g-wrap img{
         position: absolute;
-        z-index: 1;
-        transition: all 1.5s ease;
+        backface-visibility: hidden;
+        transition: all 1s ease;
     }
     .g-wrap:hover img{
-        transform:rotateY(180deg);
-        z-index: 0;
+        transform: rotateY(180deg);
     }
     .g-wrap .first{
         position: absolute;
@@ -34,12 +33,12 @@
         width: 250px;
         height:350px;
         background: url(img/反面.jpg) no-repeat;
-        z-index: 0;
-        transition: all 1.5s ease;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+        transition: all 1s ease
     }
     .g-wrap:hover .first{
-        transform:rotateY(180deg);
-        z-index: 1;
+        transform: rotateY(0deg);
     }
     </style>
 </head>
