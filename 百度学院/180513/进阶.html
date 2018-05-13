@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" href="css/index01.css">
+    <title>纯 CSS 实现猫笑起来的动画</title>
+    <style type="text/css">
+        /*鼠标hover样式 写在这里*/
+        .container:hover{
+            cursor: pointer;
+        }
+        /*耳朵*/
+        .container .ear-wrap .left,.right{
+            transition: all 1.5s ease;
+        }
+        /*眼睛*/
+        .container .face .eye-core{
+            transition: all 1.5s ease;
+        }
+        .container  .face-red{
+            transition: all 1.5s ease;
+        }
+        /*下眼皮*/
+        .container .face .eye-bottom{
+            transition: all 1.5s ease;
+        }
+        .container .mouth-wrap .right{
+            transition: all 1.5s ease;
+        }
+        .container .mouth-wrap .left{
+            transition: all 1.5s ease;
+        }
+
+        .container:hover .ear-wrap .right{
+            transform: rotate(40deg);
+        }
+        .container:hover .ear-wrap .left{
+            transform: rotate(-40deg);
+        }
+
+        .container:hover .face .eye-core{
+            transform: scaleX(.8);
+        }
+        .container:hover .face .eye-bottom{
+            margin-top: 30px;
+        }
+        .container:hover .mouth-wrap .right{
+            border-radius: 40% 0% 60% 50%;
+        }
+        .container:hover .mouth-wrap .left{
+            border-radius: 40% 0% 60% 60%;
+        }
+        .container:hover  .face-red{
+            opacity: .3;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- 脸 -->
+    <div class="face">
+        <!-- 头发 -->
+        <div class="hair">
+            <div></div>
+        </div>
+        <!-- 眼睛 -->
+        <div class="eye-wrap">
+            <div class="eye left">
+                <div class="eye-circle">
+                    <div class="eye-core"></div>
+                </div>
+                <div class="eye-bottom"></div>
+                <div class="face-red"></div>
+            </div>
+            <div class="eye right">
+                <div class="eye-circle">
+                    <div class="eye-core"></div>
+                </div>
+                <div class="eye-bottom"></div>
+                <div class="face-red"></div>
+            </div>
+        </div>
+        <!-- 鼻子 -->
+        <div class="nose">
+        </div>
+        <!-- 嘴巴 -->
+        <div class="mouth-wrap">
+            <!-- <div class="mouth-top"></div> -->
+            <div class="mouth left"></div>
+            <div class="mouth right"></div>
+        </div>
+    </div>
+    <!-- 耳朵 -->
+    <div class="ear-wrap">
+        <div class="ear left"> </div>
+        <div class="ear right"> </div>
+    </div>
+</div>
+</body>
+</html>

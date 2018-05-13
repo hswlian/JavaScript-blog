@@ -1,3 +1,4 @@
+/*第一天代码*/
 .g-wrap-01{
 
 }
@@ -80,7 +81,7 @@
     }
 }
 
-
+/*第二天代码*/
 .g-wrap-02 ul{
     overflow: auto;
 }
@@ -114,4 +115,7 @@
 }
 .box6{
     transform: skewY(20deg)
+}
+li p{
+    margin-top: 30px;
 }
