@@ -1,6 +1,9 @@
-body {
-    background-color: #d69a44;
+body,html {
+    margin: 0px;
+    padding: 0px;
+
 }
+
 /* face */
 .face {
     position: absolute;
@@ -154,4 +157,55 @@ body {
     position: absolute;
     left: auto;
     right: 0;
+}
+
+
+
+/*鼠标hover样式 写在这里*/
+.container1:hover{
+    cursor: pointer;
+}
+/*耳朵*/
+.container .ear-wrap .left,.right{
+    transition: all 1.5s ease;
+}
+/*眼睛*/
+.container .face .eye-core{
+    transition: all 1.5s ease;
+}
+.container  .face-red{
+    transition: all 1.5s ease;
+}
+/*下眼皮*/
+.container .face .eye-bottom{
+    transition: all 1.5s ease;
+}
+.container .mouth-wrap .right{
+    transition: all 1.5s ease;
+}
+.container .mouth-wrap .left{
+    transition: all 1.5s ease;
+}
+
+.container:hover .ear-wrap .right{
+    transform: rotate(40deg);
+}
+.container:hover .ear-wrap .left{
+    transform: rotate(-40deg);
+}
+
+.container:hover .face .eye-core{
+    transform: scaleX(.8);
+}
+.container:hover .face .eye-bottom{
+    margin-top: 30px;
+}
+.container:hover .mouth-wrap .right{
+    border-radius: 40% 0% 60% 50%;
+}
+.container:hover .mouth-wrap .left{
+    border-radius: 40% 0% 60% 60%;
+}
+.container:hover  .face-red{
+    opacity: .3;
 }

@@ -3,63 +3,49 @@
 <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
     <link rel="stylesheet" href="css/index01.css">
-    <title>纯 CSS 实现猫笑起来的动画</title>
+    <title>进阶作业</title>
     <style type="text/css">
-        /*鼠标hover样式 写在这里*/
-        .container:hover{
-            cursor: pointer;
-        }
-        /*耳朵*/
-        .container .ear-wrap .left,.right{
-            transition: all 1.5s ease;
-        }
-        /*眼睛*/
-        .container .face .eye-core{
-            transition: all 1.5s ease;
-        }
-        .container  .face-red{
-            transition: all 1.5s ease;
-        }
-        /*下眼皮*/
-        .container .face .eye-bottom{
-            transition: all 1.5s ease;
-        }
-        .container .mouth-wrap .right{
-            transition: all 1.5s ease;
-        }
-        .container .mouth-wrap .left{
-            transition: all 1.5s ease;
-        }
-
-        .container:hover .ear-wrap .right{
-            transform: rotate(40deg);
-        }
-        .container:hover .ear-wrap .left{
-            transform: rotate(-40deg);
-        }
-
-        .container:hover .face .eye-core{
-            transform: scaleX(.8);
-        }
-        .container:hover .face .eye-bottom{
-            margin-top: 30px;
-        }
-        .container:hover .mouth-wrap .right{
-            border-radius: 40% 0% 60% 50%;
-        }
-        .container:hover .mouth-wrap .left{
-            border-radius: 40% 0% 60% 60%;
-        }
-        .container:hover  .face-red{
-            opacity: .3;
-        }
-
-
-
+    .container1{
+        position: relative;
+        top:15px;
+        height:350px;
+        background-color: #d69a44;
+        border: solid 1px rgba(155,155,155,.6);
+        cursor: pointer;
+    }
+    .g-wrap{
+        position: relative;
+       margin: 0 auto;
+       width: 250px;
+       cursor: pointer;
+    }
+    .g-wrap img{
+        position: absolute;
+        z-index: 1;
+        transition: all 1s ease;
+    }
+    .g-wrap:hover img{
+        transform:rotateY(180deg);
+        z-index: 0;
+    }
+    .g-wrap .first{
+        position: absolute;
+        top:0px;
+        width: 250px;
+        height:350px;
+        background: url(img/反面.jpg) no-repeat;
+        z-index: 0;
+        transition: all 1.5s ease;
+    }
+    .g-wrap:hover .first{
+        transform:rotateY(180deg);
+        z-index: 1;
+    }
     </style>
 </head>
 <body>
-<div class="container">
+<h2>1.纯 CSS 实现猫笑起来的动画</h2>
+<div class="container container1">
     <!-- 脸 -->
     <div class="face">
         <!-- 头发 -->
@@ -97,6 +83,13 @@
     <div class="ear-wrap">
         <div class="ear left"> </div>
         <div class="ear right"> </div>
+    </div>
+</div>
+<h2>No.4 - 3D 空间的卡片翻转动效</h2>
+<div class="container">
+    <div class="g-wrap">
+        <img src="img/正面.jpg" height="350" width="250"/>
+        <a class="first"></a>
     </div>
 </div>
 </body>

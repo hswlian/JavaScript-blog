@@ -30,8 +30,8 @@
       <file leaf-file-name="进阶.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/进阶.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="34" column="31" lean-forward="false" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+            <state relative-caret-position="368">
+              <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -40,29 +40,9 @@
       <file leaf-file-name="index01.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/index01.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="789">
-              <caret line="156" column="1" lean-forward="false" selection-start-line="156" selection-start-column="1" selection-end-line="156" selection-end-column="1" />
+            <state relative-caret-position="468">
+              <caret line="173" column="30" lean-forward="true" selection-start-line="173" selection-start-column="30" selection-end-line="173" selection-end-column="30" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="89" column="16" lean-forward="true" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="16" />
-              <folding>
-                <element signature="e#20#24#0" expanded="false" />
-                <element signature="e#32#268#0" expanded="false" />
-                <element signature="e#291#443#0" expanded="false" />
-                <element signature="e#455#608#0" expanded="false" />
-                <element signature="e#619#772#0" expanded="false" />
-                <element signature="e#777#1039#0" expanded="false" />
-                <element signature="e#1051#1076#0" expanded="false" />
-                <element signature="e#1078#1206#0" expanded="false" />
-                <element signature="e#1207#1345#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -75,6 +55,11 @@
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>poin</find>
+    </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -101,8 +86,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1067" />
-    <option name="y" value="78" />
+    <option name="x" value="821" />
+    <option name="y" value="44" />
     <option name="width" value="1337" />
     <option name="height" value="1023" />
   </component>
@@ -131,7 +116,7 @@
             <path>
               <item name="180513" type="b2602c69:ProjectViewProjectNode" />
               <item name="180513" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -153,6 +138,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\study\JavaScript-blog\百度学院\180513\img" />
       <recent name="D:\study\JavaScript-blog\百度学院\180513\css" />
     </key>
   </component>
@@ -178,15 +164,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526210021816</updated>
-      <workItem from="1526210022990" duration="4779000" />
+      <workItem from="1526210022990" duration="7973000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4779000" />
+    <option name="totallyTimeSpent" value="7973000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1067" y="78" width="1337" height="1023" extended-state="0" />
+    <frame x="821" y="44" width="1337" height="1023" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24942264" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -231,8 +217,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="89" column="16" lean-forward="true" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="16" />
+        <state relative-caret-position="300">
+          <caret line="94" column="17" lean-forward="true" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
           <folding>
             <element signature="e#20#24#0" expanded="false" />
             <element signature="e#32#268#0" expanded="false" />
@@ -249,16 +235,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/index01.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="789">
-          <caret line="156" column="1" lean-forward="false" selection-start-line="156" selection-start-column="1" selection-end-line="156" selection-end-column="1" />
+        <state relative-caret-position="468">
+          <caret line="173" column="30" lean-forward="true" selection-start-line="173" selection-start-column="30" selection-end-line="173" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/进阶.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="34" column="31" lean-forward="false" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+        <state relative-caret-position="368">
+          <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
           <folding />
         </state>
       </provider>
