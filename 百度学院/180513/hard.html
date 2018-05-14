@@ -1,0 +1,80 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <style>
+        .g-wrap{
+            position: relative;
+            margin:0 auto;
+            margin-top: 200px;
+            width: 300px;
+            height:300px;
+            perspective:300px;
+        }
+        .main{
+            height:100%;
+            transform-origin: center center -150px;
+            transform-style: preserve-3d;
+        }
+        .box{
+            position: absolute;
+            height:100%;
+            width:100%;
+            text-align: center;
+            line-height: 300px;
+            font-size: 24px;
+            background-color: rgba(155,155,155,.3);
+            border: 1px solid rgba(155,155,155,.8);
+        }
+        /* 上面 */
+        .box01{
+            transform-origin: top center;
+            transform:rotateX(-90deg);
+        }
+        /* 下边 */
+        .box02{
+            transform-origin: bottom center;
+            transform:rotateX(90deg);
+        }
+        /* 左边 */
+        .box03{
+            transform-origin: left center;
+            transform:rotateY(90deg);
+        }
+        /* 左边 */
+        .box04{
+            transform-origin: right center;
+            transform:rotateY(-90deg);
+        }
+        /* 后面*/
+        .box05{
+            transform:translateZ(-300px);
+        }
+
+        .main:hover{
+            cursor: pointer;
+            animation: rotate 10s linear;
+        }
+        @keyframes rotate {
+            from{
+                transform: rotate3d(0,-1,0,0deg);
+            }
+            to{
+                transform: rotate3d(0,-1,0,360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="g-wrap">
+    <div class="main">
+        <div class="box box01">1</div>
+        <div class="box box02">2</div>
+        <div class="box box03">3</div>
+        <div class="box box04">4</div>
+        <div class="box box05">5</div>
+        <div class="box box06">6</div>
+    </div>
+
+</div>
+</body>
+</html>

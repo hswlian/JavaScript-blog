@@ -27,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="进阶.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/进阶.html">
+      <file leaf-file-name="hard.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="606">
-              <caret line="40" column="33" lean-forward="true" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+            <state relative-caret-position="350">
+              <caret line="14" column="45" lean-forward="false" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -59,6 +59,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>poin</find>
+      <find>opc</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -69,6 +70,8 @@
         <option value="$PROJECT_DIR$/css/index.css" />
         <option value="$PROJECT_DIR$/css/index01.css" />
         <option value="$PROJECT_DIR$/进阶.html" />
+        <option value="$PROJECT_DIR$/原型/hard.html" />
+        <option value="$PROJECT_DIR$/hard.html" />
       </list>
     </option>
   </component>
@@ -86,8 +89,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="821" />
-    <option name="y" value="44" />
+    <option name="x" value="991" />
+    <option name="y" value="64" />
     <option name="width" value="1337" />
     <option name="height" value="1023" />
   </component>
@@ -113,11 +116,6 @@
               <item name="180513" type="b2602c69:ProjectViewProjectNode" />
               <item name="180513" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="180513" type="b2602c69:ProjectViewProjectNode" />
-              <item name="180513" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -137,6 +135,9 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\study\JavaScript-blog\百度学院\180513" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\study\JavaScript-blog\百度学院\180513\img" />
       <recent name="D:\study\JavaScript-blog\百度学院\180513\css" />
@@ -157,6 +158,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="a8910e1d-552b-4727-ae70-38ef10b55ae8" name="Default" comment="" />
@@ -164,15 +168,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526210021816</updated>
-      <workItem from="1526210022990" duration="8917000" />
+      <workItem from="1526210022990" duration="19796000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8917000" />
+    <option name="totallyTimeSpent" value="19796000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="821" y="44" width="1337" height="1023" extended-state="0" />
+    <frame x="991" y="64" width="1337" height="1023" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24942264" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -204,17 +208,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/基础.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="11" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="7" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -243,8 +236,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/进阶.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="40" column="33" lean-forward="true" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+        <state relative-caret-position="356">
+          <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/基础.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="11" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="7" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="45" lean-forward="false" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
           <folding />
         </state>
       </provider>
