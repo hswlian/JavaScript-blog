@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4214b1e-f3e7-4871-9126-84e2e58d765b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/百度学院/180513/img/slider01.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/百度学院/180513/img/slider02.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/百度学院/180513/img/slider03.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/百度学院/180513/img/slider04.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/百度学院/180513/img/slider05.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/百度学院/180513/hard02.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/百度学院/index.html" afterPath="$PROJECT_DIR$/百度学院/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="707">
-              <caret line="95" column="27" lean-forward="true" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
+            <state relative-caret-position="407">
+              <caret line="83" column="125" lean-forward="false" selection-start-line="83" selection-start-column="125" selection-end-line="83" selection-end-column="125" />
               <folding />
             </state>
           </provider>
@@ -71,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="slider03.jpg" pinned="false" current-in-tab="true">
+      <file leaf-file-name="slider03.jpg" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/百度学院/180513/img/slider03.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
@@ -126,10 +118,10 @@
         <option value="$PROJECT_DIR$/粒子化-案例/canvas.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/百度学院/180513/hard.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/百度学院/index.html" />
         <option value="D:/ex/index.html" />
         <option value="$PROJECT_DIR$/百度学院/180513/hard02.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -146,8 +138,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="755" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1671" />
     <option name="height" value="1038" />
@@ -239,17 +231,18 @@
       <workItem from="1524880499499" duration="102000" />
       <workItem from="1526275595223" duration="3136000" />
       <workItem from="1526294103151" duration="651000" />
-      <workItem from="1526349761660" duration="16957000" />
+      <workItem from="1526349761660" duration="17077000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26007000" />
+    <option name="totallyTimeSpent" value="26127000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="755" y="-8" width="1671" height="1038" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23453766" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20179136" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -484,14 +477,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="707">
-          <caret line="95" column="27" lean-forward="true" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/百度学院/180513/hard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
@@ -527,6 +512,14 @@
     <entry file="file://$PROJECT_DIR$/百度学院/180513/img/slider03.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="83" column="125" lean-forward="false" selection-start-line="83" selection-start-column="125" selection-end-line="83" selection-end-column="125" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
