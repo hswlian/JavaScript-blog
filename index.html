@@ -35,12 +35,23 @@
             margin: 10px 0;
             margin-left: 10px;
         }
+        .g-header{
+            height:200px;
+            width:200px;
+            background-color: #3f200b;
+        }
+        .g-header>span{
+            display:inline-block;
+            height:100px;
+            width:100px;
+            background-color: #d69a44;
+        }
     </style>
 </head>
 <body>
 <div class="g-doc">
     <header class="g-header">
-        闲暇时光
+        <span class="title">闲暇时光</span>
     </header>
     <section class="g-wrap g-wrap01">
         <a>js小作品</a>
@@ -74,5 +85,16 @@
         </p>
     </section>
 </div>
+<script>
+var $div = document.getElementsByClassName('g-header')[0];
+var $title = document.getElementsByClassName('title')[0];
+$div.addEventListener('click',function(){
+    alert('this is div');
+},false)
+$title.addEventListener('click',function(){
+    event.stopPropagation();
+    alert('this is span;');
+},false)
+</script>
 </body>
 </html>

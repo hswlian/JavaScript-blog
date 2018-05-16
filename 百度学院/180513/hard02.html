@@ -1,0 +1,149 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <style>
+        html,body{
+            padding: 0px;
+            margin: 0px;
+            overflow-y: hidden;
+        }
+        .slider{
+            position: relative;
+            width: 100%;
+        }
+        .slider ul{
+            position: relative;
+            margin: 0 auto;
+            width: 1200px;
+            height: 800px;
+            overflow: hidden;
+        }
+        .slider ul li{
+            position: absolute;
+            top:0px;
+            left:0px;
+            list-style: none;
+        }
+        footer{
+            position: absolute;
+            bottom: 0;
+            left:50%;
+            margin-left: -500px;
+            width: 1000px;
+            z-index: 999;
+        }
+        footer i{
+            display: inline-block;
+            vertical-align: bottom;
+            width: 150px;
+            height:150px;
+            cursor: pointer;
+        }
+        footer i:nth-child(1){
+            background: url(img/slider01.jpg) no-repeat;
+            background-size: cover;
+        }
+        footer i:nth-child(2){
+            background: url(img/slider02.jpg) no-repeat;
+            background-size: cover;
+        }
+        footer i:nth-child(3){
+            background: url(img/slider03.jpg) no-repeat;
+            background-size: cover;
+        }
+        footer i:nth-child(4){
+            background: url(img/slider04.jpg) no-repeat;
+            background-size: cover;
+        }
+        footer i:nth-child(5){
+            background: url(img/slider05.jpg) no-repeat;
+            background-size: cover;
+        }
+        .active{
+            z-index: 1;
+        }
+        @keyframes move0 {
+            from{
+                transform: translateX(-1200px);
+            }
+            to{
+                transform: translateX(0px);
+            }
+        }
+        @keyframes move1 {
+            from{
+                transform: translateY(-800px);
+            }
+            to{
+                transform: translateX(0px);
+            }
+        }
+        @keyframes move2 {
+            from{
+                transform: scale(0.1);
+            }
+            to{
+                transform: scale(1);
+            }
+        }
+        @keyframes move3 {
+            from{
+                transform: scale(1.4);
+            }
+            to{
+                transform: scale(1);
+            }
+        }
+        @keyframes move4 {
+            from{
+                transform: rotateZ(360deg) scale(.1);
+            }
+            to{
+                transform:rotateZ(0deg) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="g-wrap">
+    <div class="slider">
+        <ul>
+            <li class="img active" style="">
+                <img src="img/slider01.jpg"/></li>
+            <li class="img">
+                <img src="img/slider02.jpg"/></li>
+            <li class="img">
+                <img src="img/slider03.jpg"/></li>
+            <li class="img">
+                <img src="img/slider04.jpg"/></li>
+            <li class="img">
+                <img src="img/slider05.jpg"/></li>
+        </ul>
+        <footer class="g-footer">
+            <i data-index="0" data-img=""></i>
+            <i data-index="1" data-img=""></i>
+            <i data-index="2" data-img=""></i>
+            <i data-index="3" data-img=""></i>
+            <i data-index="4" data-img=""></i>
+        </footer>
+    </div>
+</div>
+
+<script>
+    var $footer = document.getElementsByClassName('g-footer')[0],
+        $img = document.getElementsByClassName('img');
+    $footer.addEventListener('click',function(event){
+        var target = event.target,
+            index =target.getAttribute('data-index');
+        document.getElementsByClassName('active')[0].removeAttribute("style");
+        for(var i=0;i<5;i++){
+            console.log(document.getElementsByClassName('active')[0]);
+            $img[i].classList.remove('active');
+        }
+        $img[index].classList.add('active');
+        str = 'animation:move' + index + ' 1.5s ease';
+        $img[index].setAttribute('style',str);
+    },true)
+</script>
+</body>
+</html>
