@@ -1,0 +1,77 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>video的兼容性</title>
+</head>
+<style>
+    body,html{
+        padding: 0;
+        margin: 0;
+        background-color: #f3b32e;
+        overflow: hidden;
+    }
+    .btn{
+        display: block;
+        margin: 7rem auto;
+        width: 2rem;
+        height:2rem;
+        background: url('open.png') no-repeat;
+        background-size: 100% 100%;
+        animation: scale 1s infinite alternate;
+    }
+    .pop{
+        display: none;
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 100%;
+        height:100%;
+        background-color: rgb(155,155,155);
+    }
+    .pop .close{
+        position: fixed;
+        right:0;
+        top:.2rem;
+        display: inline-block;
+        height:1rem;
+        width: 1rem;
+        background:url("close.png") no-repeat;
+        background-size: 100% 100%;
+    }
+    video{
+        position: absolute;
+        top:3rem;
+        width: 100%;
+    }
+    @keyframes scale {
+        from{
+            transform: scale(1.2);
+        }
+    }
+</style>
+<body>
+    <a class="btn open"></a>
+    <div class="pop">
+        <a class="close"></a>
+        <video src="https://crazynote.v.netease.com/2018/0605/73ddc056ce115c27885a1adb52ad0643qt.mp4"  controls></video>
+    </div>
+</body>
+<script src="http://zeptojs.com/zepto.min.js"></script>
+<script>
+    var $pop = document.getElementsByClassName('pop')[0];
+    var $video = document.getElementsByTagName('video')[0];
+    var $close = document.getElementsByClassName('close')[0];
+    var $open = document.getElementsByClassName('open')[0];
+    $open.addEventListener('touchend',function(){
+        alert('你触摸了屏幕');
+        $video.play();
+        $pop.setAttribute('style','display:block');
+    });
+    $close.addEventListener('touchend',function(){
+        alert('close');
+        $video.pause();
+        $pop.setAttribute('style','display:none');
+    });
+</script>
+</html>
