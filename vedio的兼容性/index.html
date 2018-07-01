@@ -14,19 +14,22 @@
         height:200rem;
     }
     .wrap{
-        height: 20rem;
+        height: 15rem;
         text-align: center;
     }
-    .wrap:after{
+    .wrap1{
+        text-align:  center;
+    }
+    .wrap:before{
         display: block;
         height:1px;
         width: 100%;
         background-color: rgb(0,0,0);
         content: '';
     }
-    .btn{
+    .wrap1 .btn{
         display: block;
-        margin: 7rem auto;
+        margin: 5.7rem auto;
         width: 2rem;
         height:2rem;
         background: url('open.png') no-repeat;
@@ -66,12 +69,13 @@
 <body>
     <section class="wrap1">
         <a class="btn open"></a>
-    </section>
-    <section class="wrap wrap1">
         <a>wrap1</a>
     </section>
     <section class="wrap wrap2">
         <a>wrap2</a>
+    </section>
+    <section class="wrap wrap3">
+        <a>wrap3</a>
     </section>
     <div class="pop">
         <a class="close"></a>
@@ -93,7 +97,7 @@
         $video.pause();
         $pop.setAttribute('style','display:none');
     });
-    $body.addEventListener('touched',function(){
+    $body.addEventListener('touchend',function(){
         alert('你触摸了屏幕');
     });
 </script>
