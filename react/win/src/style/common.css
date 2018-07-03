@@ -1,0 +1,10 @@
+@import "home/home.css";
+@import "login/login.css";
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}

@@ -1,0 +1,12 @@
+@import 'style/common.css';
+
+body,html,#root,.App {
+  margin: 0;
+  padding: 0;
+  height:100%;
+  font-family: sans-serif;
+}
+html,.App{
+  min-width: 1200px;
+}
+

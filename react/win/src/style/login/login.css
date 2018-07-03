@@ -1,0 +1,61 @@
+.main{
+    height:100%;
+    color: white;
+    background-color: rgb(3,77,153);
+    overflow: hidden;
+}
+.logo{
+    position: absolute;
+    top:30%;
+    left:200px;
+    font-size: 34px;
+}
+.panel{
+    margin-left: 70%;
+    margin-top: 200px;
+    width: 200px;
+    padding: 20px 50px;
+    color: rgb(36,98,193);
+    background-color: white;
+    text-align: center;
+    border-radius: 6px;
+}
+.panel input{
+    height:30px;
+    text-indent: 15px;
+    letter-spacing: .3px;
+}
+.panel h3{
+    margin: 20px auto;
+}
+.panel p{
+    margin: 20px auto;
+}
+.panel .panel-btn{
+    width: 100%;
+    color: #fff;
+}
+.panel .col-3{
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+}
+.panel span{
+    position: relative;
+    top:-12px;
+    left:2px;
+}
+.panel .btn{
+    display: inline-block;
+    height:30px;
+    line-height: 30px;
+    width: 60px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: rgb(4,114,207);
+    border-radius: 3px;
+    cursor: pointer;
+}
+.panel .btn-login{
+    margin-right: 10px;
+}
