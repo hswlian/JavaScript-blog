@@ -1,55 +1,38 @@
 import React, { Component } from 'react';
-import {Treebeard} from 'react-treebeard';
-
-const data = {
-    name: 'root',
-    toggled: true,
-    children: [
-        {
-            name: 'parent',
-            children: [
-                { name: 'child1' },
-                { name: 'child2' }
-            ]
-        },
-        {
-            name: 'loading parent',
-            loading: true,
-            children: []
-        },
-        {
-            name: 'parent',
-            children: [
-                {
-                    name: 'nested parent',
-                    children: [
-                        { name: 'nested child 1' },
-                        { name: 'nested child 2' }
-                    ]
-                }
-            ]
-        }
-    ]
-};
-
+import { Tree } from 'antd';
+import 'antd/dist/antd.css';
+const TreeNode = Tree.TreeNode;
+const nodeName = ['1号屏','2号屏','3号屏','4号屏','5号屏'];
+const location = ['医疗区域3','医疗区域4','医疗区域5','医疗区域6','医疗区域7','医疗区域8','医疗区域9','医疗区域10'];
 class TreeExample extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state = {};
-        this.onToggle = this.onToggle.bind(this);
     }
-    onToggle(node, toggled){
-        if(this.state.cursor){this.state.cursor.active = false;}
-        node.active = true;
-        if(node.children){ node.toggled = toggled; }
-        this.setState({ cursor: node });
+    onSelect = (selectedKeys, info) => {
+        console.log('selected', selectedKeys, info);
+    }
+    onCheck = (checkedKeys, info) => {
+        console.log('onCheck', checkedKeys, info);
     }
     render(){
         return (
-            <Treebeard
-                data={data}
-                onToggle={this.onToggle}
-            />
+            <Tree
+                checkable
+                defaultExpandedKeys={['0-0-0', '0-0-1']}
+                defaultSelectedKeys={['0-0-0', '0-0-1']}
+                defaultCheckedKeys={['0-0-0', '0-0-1']}
+                onSelect={this.onSelect}
+                onCheck={this.onCheck}
+            >
+                <TreeNode title="医疗区域1">
+                    {nodeName.map(function(x){return <TreeNode title={x} />})}
+                </TreeNode>
+                <TreeNode title="医疗区域2">
+                    {nodeName.map(function(x){return <TreeNode title={x} />})}
+                </TreeNode>
+                {location.map(function(x){return <TreeNode title={x} ><TreeNode title="1"/></TreeNode>})}
+                <TreeNode />
+            </Tree>
         );
     }
 }

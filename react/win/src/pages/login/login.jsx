@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Router,Switch } from 'react-router-dom';
 import history from '../../histroy/history';
+import {createStore} from 'redux';
 
 class Login extends Component{
     constructor(props){
@@ -30,7 +31,6 @@ class Login extends Component{
     render() {
         return(
             <div className="main">
-                <header><h2>医院显示屏</h2></header>
                 <div className="logo"><h1>信息显示屏系统</h1></div>
                 <div className="panel">
                     <h3>用户登录</h3>
