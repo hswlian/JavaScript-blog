@@ -10,14 +10,10 @@
     left:200px;
     font-size: 34px;
 }
-.logo h1{
-    font-weight: 900;
-    color:white;
-}
 .panel{
     margin-left: 70%;
     margin-top: 200px;
-    width: 250px;
+    width: 200px;
     padding: 20px 50px;
     color: rgb(36,98,193);
     background-color: white;
@@ -29,13 +25,8 @@
     text-indent: 15px;
     letter-spacing: .3px;
 }
-a{
-    color:white;
-}
 .panel h3{
     margin: 20px auto;
-    font-weight: 800;
-    color: rgb(36,98,193);
 }
 .panel p{
     margin: 20px auto;
