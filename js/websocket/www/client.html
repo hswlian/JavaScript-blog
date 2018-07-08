@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>websocket</title>
+    <link rel="stylesheet" href="css/left.css">
+    <link rel="stylesheet" href="css/right.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height:100%;
+        }
+        .pop{
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(155,155,155,.6);
+        }
+        .pop .panel{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -200px;
+            margin-top: -100px;
+            padding:20px 0;
+            width: 400px;
+            height:150px;
+            background-color: white;
+            border-radius: 4px;
+        }
+        .pop p{
+            margin: 30px auto;
+            width: 300px;
+            font-size: 18px;
+        }
+        .pop p input{
+            height: 30px;
+            text-indent: 10px;
+            letter-spacing: .2px;
+        }
+        .pop .btn{
+            margin: 0px auto;
+            display: block;
+            width: 60px;
+            height:40px;
+            line-height: 40px;
+            font-weight: 900;
+            text-align: center;
+            border-radius: 6px;
+            background-color: rgba(255,190,200,.8);
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="g-doc">
+    <div class="g-main">
+        <div class="left">
+            <div class="name">
+                <img src="img/user1.jpg" height="58" width="58"/>
+                <span class="j-username">漂亮的小喵咪</span>
+            </div>
+            <div class="f-user">
+                <div class="f-list">
+                    <img src="img/head.jpg" height="45" width="45"/>
+                    <span>花树雯</span>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="header j-username">漂亮的小猫咪</div>
+            <div class="g-panel">
+            </div>
+            <div class="container">
+                <textarea class="message" placeholder="" rows="5"></textarea>
+                <a class="btn btn-submit">提交</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pop">
+    <div class="panel">
+        <p class="col col-1">
+            <span>您的昵称：</span>
+            <input class="enterName" placeholder="请输入昵称" />
+        </p>
+        <a class="btn name-submit">确定</a>
+    </div>
+</div>
+</body>
+<script src="js/socket.io.js"></script>
+<script src="js/index.js"></script>
+</html>

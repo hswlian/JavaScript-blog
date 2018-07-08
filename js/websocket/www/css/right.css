@@ -1,0 +1,122 @@
+.right{
+    height:100%;
+    padding-left: 260px;
+}
+.g-main{
+    margin: 40px auto;
+    width: 900px;
+    height:88%;
+    border-radius: 4px;
+    background-color: white;
+}
+.g-main .g-panel{
+    height:65%;
+    padding: 20px 0;
+    padding-right: 20px;
+    overflow-y: scroll;
+}
+.g-main .container:before{
+    display: block;
+    height:1px;
+    width: 98%;
+    background-color: rgba(155,155,155,.4);
+    content: '';
+}
+.g-main .header{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.g-main .header:after{
+    display: block;
+    width: 100%;
+    height:1px;
+    background-color: rgba(155,155,155,.4);
+    content: '';
+}
+.right{
+    background-color: rgba(155,155,155,.12);
+}
+.container .message{
+    display: block;
+    margin: 25px auto;
+    padding: 10px 10px;
+    width: 92%;
+    text-indent: 10px;
+}
+.container .btn{
+    float: right;
+    display: inline-block;
+    margin-right: 20px;
+    width: 80px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid rgba(155,155,155,.6);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.user-left,.user-right{
+    display: block;
+    margin: 10px auto;
+    height:40px;
+    line-height: 40px;
+}
+.g-panel .user-left:after,.user-right:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height:0;
+    clear: both;
+}
+.user-left span, .user-right span{
+    display: inline-block;
+    position: relative;
+    margin: auto 5px;
+    padding: 0 10px;
+    border-radius: 8px;
+}
+.user-left span{
+    background-color: white;
+}
+.user-right span{
+     background-color: rgba(255,190,200,.5);
+ }
+.user-left img{
+    display: inline-block;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+.user-left span:after{
+    display: block;
+    position: absolute;
+    left:-5px;
+    top:10px;
+    width: 0px;
+    height: 0px;
+    border-top:8px solid transparent;
+    border-right: 6px solid white;
+    border-bottom: 8px solid transparent;
+    content: '';
+}
+.user-right{
+    text-align: right;
+    width: 100%;
+}
+.user-right img{
+    display: inline-block;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+.user-right span:before{
+    display: block;
+    position: absolute;
+    right:-5px;
+    top:10px;
+    width: 0px;
+    height: 0px;
+    border-top:8px solid transparent;
+    border-left: 6px solid rgba(255,190,200,.5);
+    border-bottom: 8px solid transparent;
+    content: '';
+}

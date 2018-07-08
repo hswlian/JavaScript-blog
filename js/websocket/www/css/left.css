@@ -1,0 +1,52 @@
+
+.g-doc{
+    height:100%;
+    overflow: hidden;
+    background-color: rgba(155,155,155,.2);
+}
+.left{
+    float: left;
+    height:100%;
+    width: 250px;
+    color: white;
+    background-color: rgba(0,0,0,.7);
+}
+.left .name{
+    margin-top: 15px;
+    padding-left: 20px;
+    height:65px;
+    line-height: 70px;
+}
+.left .name img{
+    display: inline-block;
+    margin:auto 5px;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+.left .name span{
+    display: inline-block;
+    font-size: 22px;
+    vertical-align: middle;
+}
+.left .f-user{
+    margin-top: 20px;
+    padding: 0 20px;
+}
+.left .f-user img{
+    margin: 0 15px;
+    display: inline-block;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+.left .f-user .f-list{
+    height:70px;
+    line-height: 70px;
+    cursor: pointer;
+}
+.left .f-user .f-list:before{
+    display: block;
+    height:1px;
+    width: 100%;
+    background-color: rgba(0,0,0,.1);
+    content: '';
+}
