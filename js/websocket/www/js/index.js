@@ -1,6 +1,7 @@
 var ws = io.connect(),
     sendInfo = {
         userInfo:1,
+        img:'',
         message:''
     },
     enterName;
@@ -9,6 +10,14 @@ function getUsername(){
     var $pop = document.getElementsByClassName('pop')[0];
     $name.addEventListener('click',function(){
         enterName = document.getElementsByClassName('enterName')[0].value;
+        /* 将用户信息存在sessionStorage */
+        if(enterName == 'huashuwen'){
+            sessionStorage.setItem('username','huashuwen');
+            sessionStorage.setItem('img','head.jpg');
+        }else{
+            sessionStorage.setItem('username',enterName);
+            sessionStorage.setItem('img','user1.jpg');
+        }
         sendInfo.userInfo = enterName;
         regName();
         $pop.style.display = 'none';
@@ -28,6 +37,7 @@ function sendMessage() {
     var $message = document.getElementsByClassName('message')[0];
     $submit.addEventListener('click',function(){
         sendInfo.message = $message.value;
+        sendInfo.img = sessionStorage.getItem('img');
         ws.emit('login',JSON.stringify(sendInfo));
         $message.value = '';
     });
@@ -38,10 +48,10 @@ function getMess(){
     ws.on('login',function(e){
         e = JSON.parse(e);
         var html ;
-        if(e.userInfo === 'huashuwen'){
+        if(e.userInfo != sessionStorage.getItem('username')){
             var div = document.createElement("div");
             div.classList.add('user-left');
-            div.innerHTML =  ' <img src="img/head.jpg" height="40" width="40"/>\n' +
+            div.innerHTML =  ' <img src="img/'+ e.img + '" height="40" width="40"/>\n' +
                                 '<span class="msg">' + e.message + '</span>\n' ;
             $panel.appendChild(div);
         }else{
@@ -50,14 +60,14 @@ function getMess(){
             $message = '';
             div.classList.add('user-right');
             div.innerHTML =' <span class="msg">' + e.message + '</span>\n'+
-                '<img src="img/user1.jpg" height="40" width="40"/>\n';
+                '<img src="img/'+ e.img + '" height="40" width="40"/>\n';
             $panel.appendChild(div);
         }
     });
 }
+
 getUsername();
 sendMessage();
 getMess();
 
-/* 将用户信息存在sessionStorage */
-sessionStorage.setItem(1,'user1');
+

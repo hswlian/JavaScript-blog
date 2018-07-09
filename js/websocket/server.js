@@ -9,7 +9,6 @@ var express = require('express'),
 
     io.sockets.on('connection', function(socket) {
         socket.on('login', function(nickname) {
-            console.log(nickname);
             io.sockets.emit('login', nickname);
         });
     });
